@@ -1,0 +1,138 @@
+import { LangCode } from './i18n';
+
+// Real, factual water-benefit quotes (less AI-fluff, more health science)
+const QUOTES: Record<LangCode, string[]> = {
+  tr: [
+    'Vücudunun %60\'ı sudur; beynin ise %73\'ü. Bir bardak su = bir düşünme netliği.',
+    'Sadece %1\'lik dehidrasyon bile dikkatini %10\'a kadar düşürebilir.',
+    'Yemeklerden 30 dk önce 500 ml su içmek, günlük kalori alımını %13 azaltır.',
+    'Su, cildinin elastikiyetini korur ve kırışıklıkları geciktirir.',
+    'Yeterli su = daha az baş ağrısı. Dehidrasyon migren tetikleyicisidir.',
+    'Böbreklerin günde 180 L sıvı filtreler — bu çarkı dönmesini su sağlar.',
+    'Kabızlığın en yaygın nedenlerinden biri susuzluktur. Lif kadar su da önemlidir.',
+    'Egzersiz öncesi 500 ml su = %25 daha iyi performans.',
+    'Sabah aç karnına 1 bardak su metabolizmanı 24 saat için %24 hızlandırır.',
+    'Vücudun tükürük, eklem sıvısı ve lenfi sudan üretir — kuruyunca tükenirsin.',
+    'Susadığında artık dehidrasyonun erken aşamasındasın. Önce iç.',
+    'Günde 2 L su içenlerde böbrek taşı riski %50 azalır.',
+    'Kalbinin pompalaması için yeterli kan hacmi gerekir — su = kalp dostu.',
+    'Su, vücudundan ağır metalleri ve toksinleri atan tek yoldur.',
+    'Bağışıklık hücrelerinin çalışması için sıvı gerekir. Su = bağışıklık kalkanı.',
+  ],
+  en: [
+    'Your body is 60% water; your brain is 73%. A glass of water = mental clarity.',
+    'Just 1% dehydration can reduce your focus by up to 10%.',
+    '500 ml of water 30 min before meals cuts daily calories by 13%.',
+    'Water maintains skin elasticity and slows wrinkle formation.',
+    'Adequate hydration = fewer headaches. Dehydration is a migraine trigger.',
+    'Your kidneys filter 180 L of fluid daily — water keeps the cycle running.',
+    'One of the most common causes of constipation is insufficient water.',
+    '500 ml before exercise = 25% better performance.',
+    '1 glass of water on an empty stomach boosts metabolism by 24% for 24 hours.',
+    'Your body produces saliva, joint fluid, and lymph from water alone.',
+    'By the time you feel thirsty, you\'re already mildly dehydrated.',
+    'Drinking 2 L daily reduces kidney stone risk by 50%.',
+    'Your heart needs proper blood volume to pump — water is heart-friendly.',
+    'Water is the only way your body flushes heavy metals and toxins.',
+    'Immune cells need fluid to function. Water = immune shield.',
+  ],
+  de: [
+    'Dein Körper besteht zu 60% aus Wasser, dein Gehirn zu 73%. Ein Glas Wasser = mentale Klarheit.',
+    'Nur 1% Dehydration kann deine Konzentration um bis zu 10% senken.',
+    '500 ml Wasser 30 Min vor dem Essen senken die tägliche Kalorienzufuhr um 13%.',
+    'Wasser erhält die Hautelastizität und verzögert Falten.',
+    'Ausreichende Hydration = weniger Kopfschmerzen. Dehydration ist Migräne-Auslöser.',
+    'Deine Nieren filtern täglich 180 L Flüssigkeit — Wasser hält den Kreislauf am Laufen.',
+    'Eine häufige Ursache für Verstopfung ist zu wenig Wasser.',
+    '500 ml vor dem Training = 25% bessere Leistung.',
+    '1 Glas Wasser auf nüchternen Magen steigert den Stoffwechsel für 24h um 24%.',
+    'Dein Körper produziert Speichel, Gelenkflüssigkeit und Lymphe nur aus Wasser.',
+    'Wenn du durstig bist, bist du bereits leicht dehydriert.',
+    '2 L täglich senken das Risiko für Nierensteine um 50%.',
+    'Dein Herz braucht ausreichend Blutvolumen — Wasser ist herzfreundlich.',
+    'Wasser ist der einzige Weg, Schwermetalle und Toxine auszuscheiden.',
+    'Immunzellen brauchen Flüssigkeit. Wasser = Immunschild.',
+  ],
+  fr: [
+    'Ton corps est à 60% d\'eau, ton cerveau à 73%. Un verre = clarté mentale.',
+    'Seulement 1% de déshydratation peut réduire ta concentration de 10%.',
+    '500 ml d\'eau 30 min avant les repas réduit l\'apport calorique de 13%.',
+    'L\'eau maintient l\'élasticité de la peau et retarde les rides.',
+    'Bonne hydratation = moins de maux de tête. La déshydratation déclenche les migraines.',
+    'Tes reins filtrent 180 L par jour — l\'eau fait tourner le cycle.',
+    'Une cause fréquente de constipation est le manque d\'eau.',
+    '500 ml avant l\'exercice = 25% de meilleure performance.',
+    '1 verre à jeun accélère ton métabolisme de 24% pendant 24h.',
+    'Ton corps fabrique salive, liquide articulaire et lymphe à partir de l\'eau.',
+    'Quand tu as soif, tu es déjà légèrement déshydraté.',
+    '2 L par jour réduisent le risque de calculs rénaux de 50%.',
+    'Ton cœur a besoin d\'un volume sanguin adéquat — l\'eau le protège.',
+    'L\'eau est la seule voie d\'élimination des métaux lourds et toxines.',
+    'Les cellules immunitaires ont besoin d\'eau. Eau = bouclier immunitaire.',
+  ],
+  es: [
+    'Tu cuerpo es 60% agua; tu cerebro, 73%. Un vaso = claridad mental.',
+    'Solo un 1% de deshidratación reduce tu concentración hasta un 10%.',
+    '500 ml de agua 30 min antes de comer reduce calorías diarias un 13%.',
+    'El agua mantiene la elasticidad de la piel y retrasa las arrugas.',
+    'Buena hidratación = menos dolores de cabeza. La deshidratación activa migrañas.',
+    'Tus riñones filtran 180 L al día — el agua mantiene el ciclo.',
+    'Una causa común de estreñimiento es poco agua.',
+    '500 ml antes de ejercitar = 25% mejor rendimiento.',
+    '1 vaso en ayunas acelera el metabolismo un 24% por 24h.',
+    'Tu cuerpo produce saliva, líquido articular y linfa solo con agua.',
+    'Cuando tienes sed, ya estás levemente deshidratado.',
+    '2 L al día reducen el riesgo de cálculos renales en 50%.',
+    'Tu corazón necesita volumen sanguíneo — el agua lo cuida.',
+    'El agua es la única vía para eliminar metales pesados y toxinas.',
+    'Las células inmunes necesitan líquido. Agua = escudo inmune.',
+  ],
+  it: [
+    'Il tuo corpo è 60% acqua; il cervello 73%. Un bicchiere = lucidità mentale.',
+    'Solo l\'1% di disidratazione può ridurre la concentrazione del 10%.',
+    '500 ml 30 min prima dei pasti riduce le calorie giornaliere del 13%.',
+    'L\'acqua mantiene l\'elasticità della pelle e rallenta le rughe.',
+    'Buona idratazione = meno mal di testa. La disidratazione innesca emicrania.',
+    'I reni filtrano 180 L al giorno — l\'acqua fa girare il ciclo.',
+    'Una causa comune di stitichezza è poca acqua.',
+    '500 ml prima dell\'esercizio = 25% di prestazioni migliori.',
+    '1 bicchiere a digiuno accelera il metabolismo del 24% per 24 ore.',
+    'Il corpo produce saliva, liquido sinoviale e linfa solo dall\'acqua.',
+    'Quando senti sete, sei già lievemente disidratato.',
+    '2 L al giorno riducono il rischio di calcoli renali del 50%.',
+    'Il cuore ha bisogno di volume sanguigno — l\'acqua lo protegge.',
+    'L\'acqua è l\'unico modo per eliminare metalli pesanti e tossine.',
+    'Le cellule immunitarie hanno bisogno di liquido. Acqua = scudo immunitario.',
+  ],
+  ar: [
+    'جسمك 60٪ ماء ودماغك 73٪. كوب ماء = صفاء ذهني.',
+    'الجفاف بنسبة 1٪ فقط يُقلل تركيزك بنسبة 10٪.',
+    '500 مل قبل الطعام بـ 30 دقيقة يُخفض السعرات اليومية بنسبة 13٪.',
+    'الماء يُحافظ على مرونة البشرة ويُؤخر التجاعيد.',
+    'ترطيب جيد = صداع أقل. الجفاف يُحفّز الصداع النصفي.',
+    'كليتاك تُرشّحان 180 لتر يومياً — الماء يُدير الدورة.',
+    'أحد الأسباب الشائعة للإمساك هو نقص الماء.',
+    '500 مل قبل التمرين = أداء أفضل بنسبة 25٪.',
+    'كوب ماء على معدة فارغة يُسرّع الأيض 24٪ لمدة 24 ساعة.',
+    'جسمك يُنتج اللعاب وسائل المفاصل واللمف من الماء وحده.',
+    'عندما تعطش فأنت في مرحلة جفاف خفيف بالفعل.',
+    '2 لتر يومياً يُقلل خطر حصى الكلى بنسبة 50٪.',
+    'قلبك يحتاج حجم دم كافٍ — الماء صديق القلب.',
+    'الماء هو الطريق الوحيد لطرد المعادن الثقيلة والسموم.',
+    'خلايا المناعة تحتاج سائلاً. الماء = درع المناعة.',
+  ],
+};
+
+export function getQuoteForDay(lang: LangCode, date: Date = new Date()): string {
+  const list = QUOTES[lang] || QUOTES.tr;
+  // Rotate per (day + hour/4) so a new quote appears every ~4 hours within a day.
+  const dayOfYear = Math.floor((date.getTime() - new Date(date.getFullYear(), 0, 0).getTime()) / 86400000);
+  const slotOfDay = Math.floor(date.getHours() / 4); // 0..5
+  const idx = (dayOfYear * 6 + slotOfDay) % list.length;
+  return list[idx];
+}
+
+export function getRandomQuote(lang: LangCode): string {
+  const list = QUOTES[lang] || QUOTES.tr;
+  return list[Math.floor(Math.random() * list.length)];
+}
