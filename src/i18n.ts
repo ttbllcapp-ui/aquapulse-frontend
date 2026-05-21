@@ -23,7 +23,7 @@ export const LANGUAGES: { code: LangCode; label: string; flag: string }[] = [
   { code: 'vi', label: 'Tiếng Việt', flag: '🇻🇳' },
 ];
 
-type Dict = Record<string, string>;
+export type Dict = Record<string, string>;
 
 const tr: Dict = {
   app_name: 'AquaPulse', app_tagline: 'Doğa ile akış halinde',

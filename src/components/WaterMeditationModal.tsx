@@ -62,7 +62,7 @@ export default function WaterMeditationModal({
         easing: Easing.inOut(Easing.cubic),
         useNativeDriver: true,
       });
-      animRef.current.start(({ finished }) => {
+      animRef.current.start(({ finished }: { finished: boolean }) => {
         if (!finished) return;
         const next = phaseRef.current === 'inhale' ? 'exhale' : 'inhale';
         phaseRef.current = next;

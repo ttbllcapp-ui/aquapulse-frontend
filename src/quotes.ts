@@ -1,7 +1,7 @@
 import { LangCode } from './i18n';
 
 // Real, factual water-benefit quotes (less AI-fluff, more health science)
-const QUOTES: Record<LangCode, string[]> = {
+const QUOTES: Partial<Record<LangCode, string[]>> = {
   tr: [
     'Vücudunun %60\'ı sudur; beynin ise %73\'ü. Bir bardak su = bir düşünme netliği.',
     'Sadece %1\'lik dehidrasyon bile dikkatini %10\'a kadar düşürebilir.',
