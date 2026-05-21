@@ -75,7 +75,7 @@ export async function openRateInAppStore(): Promise<void> {
     }
   } catch {}
   // Fallback to App Store URL (replace with real APP_STORE_ID after first submit)
-  const APP_STORE_ID = '0000000000'; // TODO replace with real numeric app id post-submit
+  const APP_STORE_ID = '6770733097'; // TODO replace with real numeric app id post-submit
   const url = Platform.OS === 'ios'
     ? `itms-apps://itunes.apple.com/app/id${APP_STORE_ID}?action=write-review`
     : `https://apps.apple.com/app/id${APP_STORE_ID}`;
@@ -84,7 +84,7 @@ export async function openRateInAppStore(): Promise<void> {
 
 /** Share the app — viral mechanic. */
 export async function shareApp(language: 'tr' | 'en' = 'en'): Promise<void> {
-  const APP_STORE_URL = 'https://apps.apple.com/app/aquapulse-water-tracker/id0000000000';
+  const APP_STORE_URL = 'https://apps.apple.com/app/aquapulse-water-tracker/id6770733097';
   const msg = language === 'tr'
     ? `AquaPulse — günde 2 dakika, daha sağlıklı bir hayat. AI hidrasyon koçu, vücut su haritası, aile modu — tamamen ücretsiz: ${APP_STORE_URL}`
     : `I'm using AquaPulse to stay hydrated — AI coach, body water map, family mode, all free. Try it: ${APP_STORE_URL}`;
