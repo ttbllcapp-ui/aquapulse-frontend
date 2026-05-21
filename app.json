@@ -11,12 +11,29 @@
     "ios": {
       "bundleIdentifier": "com.ttbinternationalllc.aquapulse",
       "supportsTablet": true,
-      "buildNumber": "1",
+      "buildNumber": "2",
       "infoPlist": {
         "NSUserNotificationsUsageDescription": "Send daily water reminders so you stay hydrated",
         "ITSAppUsesNonExemptEncryption": false,
         "CFBundleLocalizations": [
-          "en", "tr", "de", "fr", "es", "it", "pt", "nl", "ru", "ar", "ja", "ko", "zh", "hi", "id", "vi", "th", "pl"
+          "en",
+          "tr",
+          "de",
+          "fr",
+          "es",
+          "it",
+          "pt",
+          "nl",
+          "ru",
+          "ar",
+          "ja",
+          "ko",
+          "zh",
+          "hi",
+          "id",
+          "vi",
+          "th",
+          "pl"
         ],
         "CFBundleDevelopmentRegion": "en"
       }
@@ -70,7 +87,11 @@
       "companyName": "TTB International LLC",
       "privacyUrl": "https://ttbllcapp-ui.github.io/aquapulse-legal/privacy.html",
       "termsUrl": "https://ttbllcapp-ui.github.io/aquapulse-legal/terms.html",
-      "supportUrl": "https://ttbllcapp-ui.github.io/aquapulse-legal/support.html"
+      "supportUrl": "https://ttbllcapp-ui.github.io/aquapulse-legal/support.html",
+      "router": {},
+      "eas": {
+        "projectId": "24d46cbc-74e1-4de9-ab2b-7dd9f873caf1"
+      }
     }
   }
 }
