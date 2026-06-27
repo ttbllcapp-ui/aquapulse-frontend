@@ -3,7 +3,7 @@ import { LangCode } from './i18n';
 
 const PRIVACY_TR = `AquaPulse Gizlilik Politikası
 
-Son güncelleme: 3 Mayıs 2026
+Son güncelleme: 27 Haziran 2026
 
 TTB International LLC ("biz", "bizim") olarak gizliliğinizi önemsiyoruz. Bu politika, AquaPulse uygulamasını kullandığınızda topladığımız ve işlediğimiz bilgileri açıklar.
 
@@ -16,34 +16,30 @@ AquaPulse tamamen yerel (offline) çalışır. Sağlık ve hidrasyon verileriniz
 
 Sunucularımıza kişisel veri göndermiyoruz.
 
-2. APPLE HEALTH ENTEGRASYONU (opsiyonel)
-Apple Health'i etkinleştirirseniz, su tüketim verileriniz Apple Health'e kaydedilebilir. Bu veri Apple'ın kontrolünde kalır, biz erişmiyoruz.
-
-3. BİLDİRİMLER
+2. BİLDİRİMLER
 İzin verirseniz, su içme hatırlatıcıları için yerel bildirimler kullanırız. Bildirim içerikleri sunucularımıza gönderilmez.
 
-4. ANALİTİK
+3. ANALİTİK
 Anonim kullanım istatistikleri (kaç gün açıldığı gibi) toplanabilir. Kişisel kimlik bilgisi paylaşılmaz.
 
-5. ÜÇÜNCÜ TARAF SERVİSLER
-• Apple HealthKit (opsiyonel)
+4. ÜÇÜNCÜ TARAF SERVİSLER
 • Apple Push Notification Service
 • Hiçbir reklam ağı veya tracker kullanılmaz
 
-6. ÇOCUKLAR
+5. ÇOCUKLAR
 AquaPulse 13 yaş altı çocukların kullanımı için tasarlanmamıştır.
 
-7. HAKLARINIZ
+6. HAKLARINIZ
 İstediğiniz zaman tüm verilerinizi Ayarlar > Sıfırla menüsünden silebilirsiniz.
 
-8. İLETİŞİM
+7. İLETİŞİM
 Sorularınız için: info@ttbinternationalllc.com
 
 Bu politika değiştirilebilir. Güncellemeler bu sayfada yayınlanır.`;
 
 const PRIVACY_EN = `AquaPulse Privacy Policy
 
-Last updated: May 3, 2026
+Last updated: June 27, 2026
 
 TTB International LLC ("we", "us") values your privacy. This policy explains the information we collect and process when you use AquaPulse.
 
@@ -56,34 +52,30 @@ AquaPulse runs fully offline. Your health and hydration data is stored only on y
 
 We do not send personal data to our servers.
 
-2. APPLE HEALTH INTEGRATION (optional)
-If you enable Apple Health, your water intake data may be saved to Apple Health. This data remains under Apple's control; we do not access it.
-
-3. NOTIFICATIONS
+2. NOTIFICATIONS
 If permitted, we use local notifications for water reminders. Notification content is not sent to our servers.
 
-4. ANALYTICS
+3. ANALYTICS
 Anonymous usage stats (such as app opens) may be collected. No personal identifiers are shared.
 
-5. THIRD-PARTY SERVICES
-• Apple HealthKit (optional)
+4. THIRD-PARTY SERVICES
 • Apple Push Notification Service
 • No ad networks or trackers are used
 
-6. CHILDREN
+5. CHILDREN
 AquaPulse is not intended for use by children under 13.
 
-7. YOUR RIGHTS
+6. YOUR RIGHTS
 You can delete all your data anytime from Settings > Reset.
 
-8. CONTACT
+7. CONTACT
 Questions: info@ttbinternationalllc.com
 
 This policy may change. Updates will be posted on this page.`;
 
 const TERMS_TR = `AquaPulse Kullanım Koşulları
 
-Son güncelleme: 3 Mayıs 2026
+Son güncelleme: 27 Haziran 2026
 
 AquaPulse uygulamasını ("Uygulama") kullanarak aşağıdaki şartları kabul etmiş olursunuz.
 
@@ -113,7 +105,7 @@ info@ttbinternationalllc.com`;
 
 const TERMS_EN = `AquaPulse Terms of Service
 
-Last updated: May 3, 2026
+Last updated: June 27, 2026
 
 By using AquaPulse ("App"), you agree to these terms.
 
