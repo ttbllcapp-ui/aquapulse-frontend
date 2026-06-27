@@ -12,7 +12,6 @@
       "bundleIdentifier": "com.ttbinternationalllc.aquapulse",
       "supportsTablet": true,
       "buildNumber": "4",
-      "usesAppleSignIn": true,
       "infoPlist": {
         "NSUserNotificationsUsageDescription": "Send daily water reminders so you stay hydrated",
         "ITSAppUsesNonExemptEncryption": false,

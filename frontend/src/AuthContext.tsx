@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
-import { Linking } from 'react-native';
-import { apiGet, apiPost, getToken, setToken, clearToken, BACKEND_URL, API_BASE } from './api';
+import { apiGet, apiPost, getToken, clearToken, BACKEND_URL } from './api';
 
 export interface AuthUser {
   user_id: string;
@@ -12,7 +11,6 @@ export interface AuthUser {
 interface AuthCtx {
   user: AuthUser | null;
   loading: boolean;
-  signInWithApple: (params: { identityToken: string; fullName?: string }) => Promise<{ ok: boolean; error?: string }>;
   signOut: () => Promise<void>;
   refresh: () => Promise<void>;
 }
@@ -44,12 +42,6 @@ async function fetchWithTimeout(
   throw lastErr;
 }
 
-/**
- * Warm up the backend (Render free tier sleeps after 15 min idle).
- * Called from screens that lead to auth (login, welcome) so by the time
- * the user clicks "Sign in with Apple" the server is awake.
- * Silent — no UI feedback. Fires and forgets.
- */
 export async function warmupBackend(): Promise<void> {
   try {
     await fetchWithTimeout(`${BACKEND_URL}/api/health`, { method: 'GET', timeoutMs: 45000, retries: 0 });
@@ -79,7 +71,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setUser(me);
   }, []);
 
-  // Initial load
   useEffect(() => {
     (async () => {
       await refresh();
@@ -93,38 +84,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setUser(null);
   }, []);
 
-  const signInWithApple = useCallback(async ({ identityToken, fullName }: { identityToken: string; fullName?: string }): Promise<{ ok: boolean; error?: string }> => {
-    try {
-      // 45-second timeout + 1 retry. Render free tier can take 30-60s to wake
-      // from a cold start; without timeout the UI hangs indefinitely and
-      // App Review rejects (Guideline 2.1(a)).
-      const res = await fetchWithTimeout(`${API_BASE}/auth/apple`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ identity_token: identityToken, full_name: fullName }),
-        timeoutMs: 45000,
-        retries: 1,
-      });
-      if (!res.ok) {
-        const txt = await res.text().catch(() => '');
-        return { ok: false, error: `HTTP ${res.status} ${txt}` };
-      }
-      const data = await res.json();
-      if (data?.session_token) {
-        await setToken(data.session_token);
-      }
-      await refresh();
-      return { ok: true };
-    } catch (e: any) {
-      const msg = e?.name === 'AbortError'
-        ? 'Sign-in timed out. Please check your connection and try again.'
-        : (e?.message || 'unknown');
-      return { ok: false, error: msg };
-    }
-  }, [refresh]);
-
   return (
-    <Ctx.Provider value={{ user, loading, signInWithApple, signOut, refresh }}>
+    <Ctx.Provider value={{ user, loading, signOut, refresh }}>
       {children}
     </Ctx.Provider>
   );
