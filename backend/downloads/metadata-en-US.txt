@@ -1,0 +1,204 @@
+============================================================
+AquaPulse — Water Tracker
+App Store Connect Metadata · en-US (Primary)
+Version 1.0.0 · TTB International LLC
+============================================================
+
+NAME (max 30)
+------------------------------------------------------------
+AquaPulse — Water Tracker
+
+
+SUBTITLE (max 30)
+------------------------------------------------------------
+AI hydration coach. Free.
+
+
+PROMOTIONAL TEXT (max 170)
+------------------------------------------------------------
+Your personal AI hydration coach. Body Water Map, Family Mode, 18 languages — and 100% free, no ads, no subscriptions, ever.
+
+
+KEYWORDS (max 100, comma-separated, NO spaces after commas)
+------------------------------------------------------------
+water,hydration,tracker,drink,reminder,ai,coach,family,glass,thirst,wellness,streak,habit,health
+(94 chars)
+
+
+DESCRIPTION (max 4000)
+------------------------------------------------------------
+Most people struggle to drink enough water consistently.
+AquaPulse makes hydration simple — and it's 100% free,
+no ads, no subscriptions, ever.
+
+⭐ SIMPLE. SMART. BEAUTIFUL.
+
+💧 TRACK IN ONE TAP
+- Beautiful crystal-glass animation
+- Log water, coffee, tea, milk, juice
+- Personalized goal based on weight & activity
+
+🤖 AQUACOACH AI
+- Personal hydration coach (GPT-4o)
+- Knows your weight, goal & today's intake
+- Real, contextual advice — not generic tips
+
+🫀 BODY WATER MAP
+- See how water reaches your brain, heart,
+  kidneys, muscles and skin
+
+🧘 WATER BREATH
+- 30-second premium breathing meditation
+
+👨‍👩‍👧 FAMILY MODE
+- 6-character invite code
+- Live family leaderboard
+
+🔔 SMART REMINDERS
+- Adaptive schedule that respects sleep & work
+- Streak tracking & achievements
+
+🌍 18 LANGUAGES
+- English, Turkish, German, French, Spanish,
+  Portuguese, Italian, Dutch, Russian, Arabic,
+  Japanese, Korean, Chinese, Hindi, Indonesian,
+  Vietnamese, Thai, Polish
+
+🔒 PRIVACY FIRST
+- Sign in with Apple/Google or use as Guest
+- No ads, no trackers, no IDFA
+- Delete your account & all data in one tap
+
+Build healthier habits with AquaPulse.
+
+
+WHAT'S NEW (release notes for v1.0.0, max 4000)
+------------------------------------------------------------
+• Initial release 🎉
+• AquaCoach AI hydration coach (GPT-4o)
+• Body Water Map — 8-organ analysis
+• Water Breath 30-second meditation
+• Family Mode — 6-character invite code + live leaderboard
+• Full 18-language translation
+• Premium crystal-glass UI
+• Smart reminders, streak tracking, achievements
+• One-tap account deletion (Apple compliant)
+• 100% free — no ads, no subscriptions, no paywall
+
+
+SUPPORT URL
+------------------------------------------------------------
+https://ttbllcapp-ui.github.io/aquapulse-legal/support.html
+
+
+MARKETING URL (optional)
+------------------------------------------------------------
+https://ttbllcapp-ui.github.io/aquapulse-legal/
+
+
+PRIVACY POLICY URL
+------------------------------------------------------------
+https://ttbllcapp-ui.github.io/aquapulse-legal/privacy.html
+
+
+PRIMARY CATEGORY
+------------------------------------------------------------
+Health & Fitness
+
+
+SECONDARY CATEGORY (optional)
+------------------------------------------------------------
+Lifestyle
+
+
+AGE RATING
+------------------------------------------------------------
+4+
+
+
+PRICING
+------------------------------------------------------------
+Free (Tier 0)
+
+
+COPYRIGHT
+------------------------------------------------------------
+© 2025 TTB International LLC
+
+
+CONTACT INFORMATION (for App Review)
+------------------------------------------------------------
+First Name:   TTB
+Last Name:    International
+Phone:        (Insert US contact phone)
+Email:        info@ttbinternationalllc.com
+
+
+REVIEW DEMO ACCOUNT (for reviewer)
+------------------------------------------------------------
+Username: ttbllcapp@gmail.com
+Password: ttb2025demo
+Notes:    The app also offers a GUEST mode — reviewer can simply tap
+          "Continue as Guest" on the welcome screen and use all features
+          (tracking, AI coach, body map, breath, family preview) without
+          signing in. No data leaves the device in guest mode.
+
+
+REVIEW NOTES
+------------------------------------------------------------
+• AquaPulse is a 100% free water-tracking app — no ads, no IAPs,
+  no subscriptions, no paywalls.
+• "Sign in with Apple" is fully implemented as required by App Store
+  Guideline 4.8 (alongside Google Sign-In and Guest mode).
+• Account deletion is available at Settings → Account → Delete Account
+  (required by App Store Guideline 5.1.1(v)). It permanently removes
+  the user record, chat history and family membership server-side.
+• AquaCoach uses OpenAI gpt-4o via our server-side proxy. Only the
+  user's message and basic hydration context (today's intake, goal,
+  weight) are forwarded — no PII beyond what the user typed.
+• Body Water Map, Water Breath, Family Mode and 18-language support
+  are all native in-app features — no external content.
+• Backend: https://aquapulse-backend-azx6.onrender.com
+• Bundle ID: com.ttbinternationalllc.aquapulse
+
+
+EXPORT COMPLIANCE
+------------------------------------------------------------
+Uses Encryption: YES (standard HTTPS only —
+exempt under ITSAppUsesNonExemptEncryption=NO)
+
+
+CONTENT RIGHTS
+------------------------------------------------------------
+Does your app contain, show, or access third-party content? NO
+
+
+ADVERTISING IDENTIFIER (IDFA)
+------------------------------------------------------------
+Does your app use the Advertising Identifier (IDFA)? NO
+
+
+APP PRIVACY · DATA COLLECTION SUMMARY
+------------------------------------------------------------
+Data Linked to User (when signed in only):
+  • Contact Info → Email Address          (App Functionality)
+  • Contact Info → Name                   (App Functionality)
+  • User Content → Customer Support       (Customer Support)
+  • Identifiers  → User ID                (App Functionality)
+  • Health & Fitness → Other User Content (App Functionality)
+    [stored: weight, goal, daily intake — never shared with 3rd parties]
+
+Data NOT Collected:
+  • Precise/Coarse Location
+  • Advertising Data / IDFA
+  • Browsing/Search History
+  • Audio/Video/Photos
+  • Contacts
+  • Device ID / Diagnostics
+
+Guest Mode: NO data leaves the device.
+
+
+============================================================
+END OF METADATA · en-US · v1.0.0
+============================================================

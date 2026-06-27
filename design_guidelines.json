@@ -1,0 +1,134 @@
+{
+  "theme_and_archetype": {
+    "domain": "Health, Wellness, Gamification",
+    "theme": "Dark",
+    "archetype": "Archetype 5 (Jewel & Luxury)",
+    "rationale": "To create a 'premium' feel for the nature-themed water reminder, a deep ocean dark theme provides an immersive, cinematic experience. It makes the aqua gradients and neon/bioluminescent accent colors pop, resembling deep sea exploration and glowing plant life."
+  },
+  "color_palette": {
+    "background_primary": "#040F16",
+    "background_secondary": "#0A2463",
+    "background_card": "#0F3A70",
+    "primary": "#00E5FF",
+    "primary_gradient": ["#00E5FF", "#0088FF"],
+    "secondary": "#247BA0",
+    "accent_plant": "#00FF87",
+    "accent_coral": "#FF5252",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A0B5D9",
+    "border": "rgba(255, 255, 255, 0.1)",
+    "water_levels": {
+      "level_1": "#0088FF",
+      "level_2": "#00B8FF",
+      "level_3": "#00E5FF"
+    }
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Outfit",
+      "body": "Manrope"
+    },
+    "sizes": {
+      "h1": "text-4xl",
+      "h2": "text-3xl",
+      "h3": "text-xl",
+      "body": "text-base",
+      "caption": "text-sm"
+    },
+    "expo_fonts": [
+      "@expo-google-fonts/outfit",
+      "@expo-google-fonts/manrope"
+    ]
+  },
+  "spacing_and_layout": {
+    "container_padding": "p-6",
+    "card_padding": "p-4",
+    "border_radius": {
+      "card": "rounded-3xl",
+      "button": "rounded-full",
+      "badge": "rounded-2xl"
+    },
+    "glassmorphism": {
+      "backgroundColor": "rgba(15, 58, 112, 0.4)",
+      "borderColor": "rgba(255, 255, 255, 0.15)",
+      "borderWidth": 1
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "LinearGradient background, full rounded, glowing drop shadow (shadowColor: '#00E5FF', shadowOpacity: 0.5), Outfit bold text.",
+      "quick_add": "Circular glassmorphism buttons with icon inside, arranged in an arc or row at the bottom of the screen."
+    },
+    "water_visualization": {
+      "type": "Custom React Native Reanimated View",
+      "description": "A background fill that rises from the bottom of the screen based on daily percentage. Uses react-native-reanimated for smooth wave movement.",
+      "colors": ["#0088FF", "#00E5FF"]
+    },
+    "cards": {
+      "style": "Dark translucent glassmorphism to blend with the deep ocean background. Subtle 1px white/10% border."
+    }
+  },
+  "screens": {
+    "onboarding": {
+      "layout": "Centered content with full-screen ocean background. Smooth fade-in transitions. Input fields for weight, wake/sleep time using bottom sheets.",
+      "visuals": "Gentle underwater ripples in background."
+    },
+    "home": {
+      "layout": "Large circular progress ring or a full-screen rising water level behind the main UI. Large typography for current intake (e.g., '1200 / 2500 ml'). Floating action buttons for quick add (Water, Coffee, Tea).",
+      "animations": "Water rising animation on add. Small bubble particles floating upwards."
+    },
+    "stats": {
+      "layout": "Bento grid layout for weekly and monthly stats. Bar charts using react-native-chart-kit or victory-native. Streaks represented by a growing plant icon."
+    },
+    "achievements": {
+      "layout": "Grid of badges (ocean creatures). Locked badges are dim/grayscale, unlocked ones glow brightly with bioluminescent colors."
+    }
+  },
+  "animations": {
+    "libraries": ["react-native-reanimated", "expo-linear-gradient"],
+    "interactions": {
+      "add_drink": "Spring animation scale down/up on tap. Trigger waterfall or splash particles using reanimated.",
+      "water_rise": "Smooth layout animation using withTiming or withSpring when daily amount increases."
+    }
+  },
+  "media": {
+    "images": [
+      {
+        "category": "background_ocean",
+        "url": "https://images.pexels.com/photos/31843981/pexels-photo-31843981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Deep underwater ocean surface for onboarding or main background. To be used with a dark overlay."
+      },
+      {
+        "category": "background_ripples",
+        "url": "https://images.pexels.com/photos/5582627/pexels-photo-5582627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Calm water ripples for stats or settings background texture."
+      }
+    ],
+    "icons": {
+      "library": "lucide-react-native",
+      "mapping": {
+        "water": "Droplet",
+        "coffee": "Coffee",
+        "tea": "CupSoda",
+        "stats": "BarChart2",
+        "achievements": "Award",
+        "settings": "Settings",
+        "plant_streak": "Sprout",
+        "turtle_badge": "Turtle",
+        "fish_badge": "Fish"
+      }
+    }
+  },
+  "testing": {
+    "attributes": "Add testID prop to all touchables, text inputs, and dynamic text fields (e.g., testID='quick-add-water-button', testID='daily-progress-text')."
+  },
+  "instructions_to_main_agent": [
+    "This is a React Native Expo project. Do not use web-only DOM libraries (like HTML divs, framer-motion, or Shadcn standard UI).",
+    "Use StyleSheet or Tailwind (via NativeWind) if configured, but ensure React Native View/Text primitives are used.",
+    "Implement the background using expo-linear-gradient and the provided Pexels background images with an dark overlay (rgba(4, 15, 22, 0.8)).",
+    "Use react-native-reanimated for the rising water level animation on the Home screen.",
+    "For the quick add buttons, use a glassmorphism style (rgba background with border) floating over the water animation.",
+    "Use Lucide-react-native icons for the UI and badges as specified in the media.icons section.",
+    "Ensure the gamification 'Streak' uses the 'Sprout' icon, and 'Achievements' use sea creature metaphors (Turtle, Fish) to match the nature/ocean theme."
+  ]
+}
